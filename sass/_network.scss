@@ -1,0 +1,31 @@
+.network{
+    background-color: #F6F6F6;
+    padding-bottom: 38px;
+    &-header{
+        max-width: 555px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &-heading{
+       padding: 0 86px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &-image{
+        max-width: 1060px;
+        margin: 0 auto;
+        margin-top: 153px;
+       
+    }
+}
+
+@media screen and(max-width:767px) {
+    .network{
+        &-heading{
+            padding: 0;
+        }
+        &-image{
+            margin-top: 50px;
+        }
+    }
+}

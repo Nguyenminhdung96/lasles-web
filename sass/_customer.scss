@@ -1,0 +1,166 @@
+.customer{
+    // background-color: $background-color;
+    padding-top: 100px;
+    margin-bottom: 183px;
+    &-header{
+        margin-bottom: 60px;
+    }
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0 50px;
+
+        
+    }
+    &-item{
+        padding: 30px;
+        border: 2px solid rgba(221, 221, 221, 1);
+        border-radius: 10px;
+
+        margin-bottom: 120px;
+        // margin-left: -20px;
+        
+    }
+    &-item.slick-current.slick-active{
+        border: 2px solid $primary-color;
+    }
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        margin-bottom: 20px;
+    
+    }
+    &-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 20px; 
+    }
+    &-title{
+        font-size: 18px;
+        line-height: calc(30/18);
+    }
+    &-adress{
+        font-size: 14px;
+        line-height: calc(30/14);
+    }
+    &-star{
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+
+        font-size: 16px;
+        line-height: calc(30/16);
+
+        color: #0B132A;
+
+    }
+    &-desc{
+        font-size: 16px;
+        line-height: calc(30/16);
+        font-weight: 400;
+        color: $heading-color;
+    }
+    .slick-track{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 50px;
+        
+    }
+    .slick-dots{
+       
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        gap: 0 15px;
+
+        margin-left: 50px;
+        bottom: 15px;
+        width: auto;
+
+       li{
+        width: auto;
+        height: auto;
+        margin: 0;
+
+       }
+       button{
+           width: 15px;
+           height: 15px;
+           border-radius: 100rem;
+           background-color: 
+           #DDE0E4;
+           font-size: 0;
+           transition: 0.3s ease-in-out 0s;
+           &::before{
+               display: none;
+           }
+       }
+       li.slick-active > button{
+           width: 45px;
+           background-color: $primary-color;
+       }
+    }
+    .slide-arrow{
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        width: 60px;
+        height: 60px;
+        border-radius: 100rem;
+        border: 2px solid $primary-color;
+
+        background-color: transparent;
+    }
+    .prev-arrow{
+        margin-right: 80px;
+        z-index: 10;
+    }
+    .next-arrow{
+        background-color: $primary-color;
+    }
+
+
+}
+
+@media screen and(max-width:1023px) {
+    .customer{
+        padding-top: 50px;
+    }
+}
+@media screen and(max-width:767px) {
+    .customer{
+        &-header{
+            margin-bottom: 50px;
+        }
+
+        .slide-arrow{
+            bottom: 30px;
+        }
+        .slick-track{
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+           gap: 0 17px;
+            
+        }
+        .slick-dots{
+            display: none !important;
+        }
+        .prev-arrow{
+            left:100px;
+        }
+        .next-arrow{
+            right: 100px;
+            z-index: 10;
+        }
+    }
+}

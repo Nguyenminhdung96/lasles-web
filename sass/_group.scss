@@ -1,0 +1,18 @@
+.group{
+    background-color: $background-color;
+    // padding-bottom: 50px;
+    box-shadow: 0 30px 25px -10px rgba(13, 16, 37, 6%);
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 5px;
+       
+    }
+}
+@media screen and(max-width:1023px) {
+    .group{
+        padding-bottom: 0;
+    }
+}

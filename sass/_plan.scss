@@ -1,0 +1,126 @@
+.plan{
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-color: #F6F6F6;
+    &-header{
+        max-width: 555px;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+    &-heading{
+        margin-bottom: 20px;
+    }
+    &-text{
+        margin-bottom: 60px;
+    }
+    &-main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0 50px;
+    }
+    &-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border: 2px solid rgba(221, 221, 221, 1);
+        border-radius: 10px;
+        padding: 79px 0 50px;
+
+        background-color: #fff;
+    }
+    &-title{
+        font-size: 18px;
+        line-height: calc(30/18);
+
+        margin-top: 30px;
+    }
+    &-list{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        list-style: none;
+    }
+    &-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0 20px;
+
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+    &-box{
+        margin-top: auto;
+    }
+    &-free{
+        font-size: 25px;
+        line-height: calc(30/25);
+        text-align: center;
+        margin-bottom: 20px;    
+    }
+    &-btn{
+        padding: 13px 62px;
+    }
+}
+@media screen and(max-width:1023px) {
+    .plan {
+        padding: 100px 0;
+        &-main{
+            overflow-x: auto;
+            // scroll-padding: 1rem;
+            // scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            &::-webkit-scrollbar{
+                display: none;
+                width: 0;
+            }
+           
+        }
+        &-items{
+            width: 310px;
+            padding: 30px 0 30px;
+        }
+        &-title{
+            margin-top: 30px;
+        }
+        &-list{
+            margin-bottom: 30px;
+        }
+        
+      }
+    
+    // .plan-main {
+    //     display: grid;
+    //     justify-content: flex-start;
+    //     grid-auto-columns: 310px;
+    //     grid-auto-flow: column;
+    //     grid-gap: 0 30px;
+    //     overflow: auto;
+    //     overflow-y: hidden;
+    //     scroll-snap-type: x mandatory;
+    //     scroll-snap-stop: always;
+    //     -ms-touch-action: manipulation;
+    //     touch-action: manipulation;
+    //     -webkit-overflow-scrolling: touch;
+    //     scroll-padding: 1rem;
+    //     grid-template-columns: unset;
+    //     margin-bottom: 50px;
+    //   }
+    //   .plan-main::-webkit-scrollbar {
+    //     display: none;
+    //     width: 0;
+    //   }
+    //   .plan-main > * {
+    //     scroll-snap-align: start;
+    //   }
+    
+}
+@media screen and(max-width:767px) {
+    .plan{
+        &-items{
+            width: 340px;
+        }
+    }
+}
